@@ -1,9 +1,27 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: 'class', // 'class' atau 'media' (v3 tidak support false)
   theme: {
     fontFamily: {
-      sans: ["Poppins", "Oswald", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      sans: [
+        "Poppins", 
+        "Oswald", 
+        "ui-sans-serif", 
+        "system-ui", 
+        "-apple-system", 
+        "BlinkMacSystemFont", 
+        "Segoe UI", 
+        "Roboto", 
+        "Helvetica Neue", 
+        "Arial", 
+        "Noto Sans", 
+        "sans-serif", 
+        "Apple Color Emoji", 
+        "Segoe UI Emoji", 
+        "Segoe UI Symbol", 
+        "Noto Color Emoji"
+      ],
     },
     extend: {
       colors: {
@@ -38,9 +56,6 @@ module.exports = {
         },
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 }
